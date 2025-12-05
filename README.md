@@ -72,8 +72,8 @@ The original data source is updated every month, the results shown are based on 
 
 Data cleaning is performed via:
 
-- sql/create_tables.sql giving the table `satellites` inside `data/processed/satellites.db` 
-- sql/data_cleaning.sql giving the cleaned SQL table: `satellites_clean` inside `data/processed/satellites.db`.
+- `sql/create_tables.sql` giving the table `satellites` inside `data/processed/satellites.db` 
+- `sql/data_cleaning.sql` giving the cleaned SQL table: `satellites_clean` inside `data/processed/satellites.db`.
 
 Cleaning tasks include:
 
@@ -128,10 +128,11 @@ Categorical:
 Tree-based models reach ~99% accuracy. Logistic Regression ~97–98%.
 
 Saved as:
+```
 models/sklearn/classification_rf.joblib
 models/sklearn/classification_gb.joblib
 models/sklearn/classification_logreg.joblib
-
+```
 
 ## 3.2 Regression — Predicting Orbital Period
 
@@ -152,10 +153,11 @@ Metrics reported:
 - R²  
 
 Saved as:
+```
 models/sklearn/regression_linreg.joblib
 models/sklearn/regression_rf_reg.joblib
 models/sklearn/regression_gb_reg.joblib
-
+```
 
 # 4. Neural Network Classifier (Keras)
 
@@ -169,9 +171,11 @@ Preprocessing uses a scikit-learn ColumnTransformer:
 - OneHotEncoder for categorical features  
 
 Saved model artifacts:
+```
 models/keras/keras_classification_model.h5
 models/keras/preprocessor.joblib
 models/keras/class_labels.npy
+```
 
 # 5. Training the Models
 
@@ -179,13 +183,13 @@ All models can be retrained via `.py` scripts (no need for notebooks).
 
 
 ## Train classification models
-python src/train_classification.py
+`python src/train_classification.py`
 
 ## Train regression models
-python src/train_regression.py
+`python src/train_regression.py`
 
 ## Train Keras neural network
-python src/train_keras.py
+`python src/train_keras.py`
 
 After training, new model files will appear in `models/`.
 
@@ -293,13 +297,13 @@ If you want to **rebuild the database from the raw CSV**, you can:
 2. Place it under `data/raw/`.
 3. Use the SQL scripts and the notebook `notebooks/01_sql_exploration.ipynb` to recreate `satellites.db`.
 
-## 8.5 **Database**
+## 8.4 **Database**
 
 `data/processed/satellites.db` is already provided, so you can directly train the models.
 
 If you prefer to rebuild it from scratch, see the optional step above.
 
-## 8.6 Run the Notebooks (Optional)
+## 8.5 Run the Notebooks (Optional)
 
 If you want to explore the analysis or re-run experiments: 
 
@@ -320,20 +324,20 @@ All models can be trained without opening Jupyter. See Secs. 5 and 6
 
 ## 8.8 Troubleshooting
 
-7. Troubleshooting
-
 - TensorFlow not found: 
 Install CPU version manually:
 
 ```pip install tensorflow==2.15```
 
 - Database not found:
-Ensure data/processed/satellites.db exists. Re-run SQL scripts if necessary.
+Ensure `data/processed/satellites.db` exists. Re-run SQL scripts if necessary.
 
-```ImportError for src modules:
+```
+ImportError for src modules:
 Run Python from project root:
 
-python src/train_classification.py```
+python src/train_classification.py
+```
 
 - Keras training starts at high accuracy:
 Restart kernel or call:
