@@ -1,0 +1,32 @@
+satellite-orbit-analytics/
+├─ data/
+│  ├─ raw/                      # Original CSV dataset
+│  │   └─ satellite_orbital_catalog.csv
+│  └─ processed/
+│      └─ satellites.db         # SQLite database with cleaned data
+│
+├─ sql/
+│  ├─ create_tables.sql         # Import raw CSV -> SQLite schema
+│  ├─ data_cleaning.sql         # Cleaning, normalization, feature creation
+│  └─ exploration_queries.sql   # Data exploration queries (EDA)
+│
+├─ notebooks/
+│  ├─ 01_sql_exploration.ipynb
+│  ├─ 02_classification_models.ipynb
+│  ├─ 03_regression_models.ipynb
+│  └─ 04_keras_neural_network.ipynb
+│
+├─ src/
+│  ├─ db_utils.py
+│  ├─ preprocessing.py
+│  ├─ features.py
+│  ├─ train_classification.py   # Train ML classification
+│  ├─ train_regression.py       # Train ML regression
+│  └─ train_keras.py            # Train Keras neural network
+│  └─ inference.py              # Load/use trained models
+│
+├─ models/
+│  ├─ sklearn/                  # Saved ML models (.joblib)
+│  └─ keras/                    # Keras model (.h5) + preprocessor
+│
+└─ README.md

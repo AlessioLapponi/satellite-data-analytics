@@ -1,0 +1,75 @@
+# --------------------------------------------
+# Python cache & temp files
+# --------------------------------------------
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.pkl
+
+# Byte-compiled / optimized / DLL files
+*.so
+*.dll
+*.dylib
+
+# Jupyter notebook checkpoints
+.ipynb_checkpoints/
+
+# --------------------------------------------
+# Virtual environments (conda, venv, etc.)
+# --------------------------------------------
+.env/
+.venv/
+env/
+venv/
+*/.venv/
+
+# Pip cache
+pip-wheel-metadata/
+pip-cache/
+
+# --------------------------------------------
+# OS-specific junk
+# --------------------------------------------
+.DS_Store
+Thumbs.db
+
+# --------------------------------------------
+# Data
+# --------------------------------------------
+
+# Raw data (not included in repo)
+data/raw/
+
+# Processed data
+# KEEP satellites.db → do NOT ignore it
+# If you had other intermediate files, you could exclude them here.
+# Example:
+# data/processed/*.parquet
+
+# --------------------------------------------
+# Models
+# --------------------------------------------
+# Exclude trained models (they can be regenerated)
+models/
+
+# --------------------------------------------
+# VSCode / IDE files
+# --------------------------------------------
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# --------------------------------------------
+# Logs
+# --------------------------------------------
+*.log
+logs/
+
+# --------------------------------------------
+# Additional build / packaging files
+# --------------------------------------------
+dist/
+build/
+*.egg-info/
