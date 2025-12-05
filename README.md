@@ -14,7 +14,7 @@ It demonstrates a complete end-to-end workflow:
 
 
 # Project Structure
-
+```
 satellite-orbit-analytics/
 ├─ data/
 │  ├─ raw/                      # Original CSV dataset
@@ -48,8 +48,9 @@ satellite-orbit-analytics/
 │
 ├─ README.md
 └─ requirements.txt
+```
 
-## 📡 Dataset
+## Dataset
 
 The project is based on an orbital catalog of Earth satellites (TLE-derived and enriched with additional metadata).
 
