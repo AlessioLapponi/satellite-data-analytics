@@ -39,7 +39,7 @@ Thumbs.db
 # --------------------------------------------
 
 # Raw data (not included in repo)
-data/raw/
+data/raw/*.csv
 
 # Processed data
 # KEEP satellites.db → do NOT ignore it
