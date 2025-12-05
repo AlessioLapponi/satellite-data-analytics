@@ -318,11 +318,11 @@ Then open:
 
 These notebooks reproduce data analysis, model training, and evaluations.
 
-## 8.7 Train the Models (Command Line)
+## 8.6 Train the Models (Command Line)
 
 All models can be trained without opening Jupyter. See Secs. 5 and 6
 
-## 8.8 Troubleshooting
+## 8.7 Troubleshooting
 
 - TensorFlow not found: 
 Install CPU version manually:
@@ -342,8 +342,10 @@ python src/train_classification.py
 - Keras training starts at high accuracy:
 Restart kernel or call:
 
-```import tensorflow.keras.backend as K
-K.clear_session()```
+```
+import tensorflow.keras.backend as K
+K.clear_session()
+```
 
 # 9. Future Work
 
